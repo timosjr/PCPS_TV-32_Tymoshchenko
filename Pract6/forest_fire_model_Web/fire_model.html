@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Модель лісової пожежі</title>
+    <link rel="stylesheet" href="fire_model_style.css">
+</head>
+<body>
+    <h1>Модель лісової пожежі</h1>
+    <div class="controls">
+        <label>P_burn: <input type="number" id="pBurn" step="0.1" value="0.6" min="0" max="1"></label>
+        <label>T_burn: <input type="number" id="tBurn" value="3" min="1"></label>
+        <label>Розмір поля: <input type="number" id="gridSize" value="50" min="10" max="200"></label>
+        <button onclick="startSimulation()">Старт</button>
+        <button onclick="stopSimulation()">Стоп</button>
+    </div>
+    <canvas id="forestCanvas" width="500" height="500"></canvas>
+
+    <script src="fire_model.js"></script>
+</body>
+</html>
